@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        .myModal{
+            width: 500px;
+            height: 500px;
+            background-color: #fff;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn btn-primary">Open modal</button>
+
+    <!-- Modal -->
+    <div class="myModal">
+        <button class="close">Close</button>
+    </div>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="js/jquery.easyModal.js"></script>
+
+    <script>
+        $('.btn').on('click', function(e) {
+            $('.myModal').easyModal({
+                closeClass: 'close',
+                opacity: .6,
+                autoClose: true
+            });
+        });
+    </script>
+</body>
+</html>
